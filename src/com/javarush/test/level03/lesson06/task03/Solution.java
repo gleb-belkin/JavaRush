@@ -11,13 +11,11 @@ package com.javarush.test.level03.lesson06.task03;
 public class Solution {
     public static void main(String[] args) {
         String[] colors = {"красный", "оранжевый", "желтый", "зеленый", "голубой", "синий", "фиолетовый"};
+        String ending = " ";
         for (int i = 0; i < colors.length; i += 3) {
             for (int j = 0; j < 3; j++) {
-
                 if (i + j < colors.length) {
-                    String ending = " ";
-
-                    if (j != 2) {
+                    if (j != 2 && i + j != colors.length - 1) {
                         System.out.print(colors[i + j] + ending);
                     } else {
                         System.out.print(colors[i + j]);
